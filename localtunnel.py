@@ -48,4 +48,4 @@ if __name__ == "__main__":
     start_ngrok(local_port)
 
     # 运行 facefusion.py
-    subprocess.run(["python", "facefusion.py","run"])
+    subprocess.run(["python", "run.py","run"])
