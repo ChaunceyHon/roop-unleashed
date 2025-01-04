@@ -1,0 +1,153 @@
+apt update
+
+apt upgrade
+
+apt dist-upgrade
+
+apt install update-manager-core
+
+do-release-upgrade -c
+
+apt install libcudnn8 libcudnn8-dev libnccl-dev libnccl2
+
+apt update
+
+apt full-upgrade
+
+do-release-upgrade
+
+关机重启
+
+lsb_release -a
+
+uname -r
+
+apt install --reinstall ubuntu-advantage-tools
+
+apt-get -y update
+
+apt-get install curl
+
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-ubuntu2204.pin
+
+mv cuda-ubuntu2204.pin /etc/apt/preferences.d/cuda-repository-pin-600
+
+wget https://developer.download.nvidia.com/compute/cuda/12.6.3/local_installers/cuda-repo-ubuntu2204-12-6-local_12.6.3-560.35.05-1_amd64.deb
+
+dpkg -i cuda-repo-ubuntu2204-12-6-local_12.6.3-560.35.05-1_amd64.deb
+
+cp /var/cuda-repo-ubuntu2204-12-6-local/cuda-*-keyring.gpg /usr/share/keyrings/
+
+apt-get update
+
+apt-get -y install cuda-toolkit-12-6
+
+wget https://developer.download.nvidia.com/compute/cudnn/9.6.0/local_installers/cudnn-local-repo-ubuntu2204-9.6.0_1.0-1_amd64.deb
+
+dpkg -i cudnn-local-repo-ubuntu2204-9.6.0_1.0-1_amd64.deb
+
+cp /var/cudnn-local-repo-ubuntu2204-9.6.0/cudnn-local-9C9A4A55-keyring.gpg /usr/share/keyrings/
+
+apt-get update
+
+apt-get -y install cudnn
+
+apt-get -y install cudnn9-cuda-12
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12/lib64
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-12.6/lib64
+
+nvcc --version
+
+git clone https://github.com/ChaunceyHon/roop-unleashed.git
+
+cd roop-unleashed
+
+mv config_colab.yaml config.yaml
+
+pip install -r requirements.txt
+
+python -c "import torch; print(f'PyTorch version: {torch.__version__}')"
+
+python -c "import torch; print(f'CUDA device is available: {torch.cuda.is_available()}')"
+
+pip install -U albumentations
+
+apt-get install dos2unix
+
+dos2unix download_models.sh
+
+chmod +x download_models.sh
+
+./download_models.sh
+
+dos2unix download_models_CLIP.sh
+
+chmod +x download_models_CLIP.sh
+
+./download_models_CLIP.sh
+
+dos2unix download_models_CodeFormer.sh
+
+chmod +x download_models_CodeFormer.sh
+
+./download_models_CodeFormer.sh
+
+dos2unix download_models_Frame.sh
+
+chmod +x download_models_Frame.sh
+
+./download_models_Frame.sh
+
+apt install ffmpeg
+
+wget https://cdn-media.hf-mirror.com/frpc-gradio-0.3/frpc_linux_amd64; mv frpc_linux_amd64 frpc_linux_amd64_v0.3; mv frpc_linux_amd64_v0.3 /root/miniconda3/lib/python3.10/site-packages/gradio
+
+whoami
+
+apt-get install curl
+
+curl ifconfig.me
+
+pip install colorama
+
+curl -sL https://deb.nodesource.com/setup_18.x | bash -
+
+apt-get install nodejs -y
+
+apt-get install nsolid -y 
+
+node -v
+npm -v
+
+npm config set registry https://registry.npm.taobao.org
+
+curl -sSL https://ngrok-agent.s3.amazonaws.com/ngrok.asc | tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null
+
+echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | tee /etc/apt/sources.list.d/ngrok.list
+
+apt update
+
+apt install ngrok
+
+ngrok config add-authtoken 2VwYlPNaWWZM2xjCKpcdpxveU6X_5YER6JG9owLUCX2PExUcS
+
+chmod +x /usr/local/bin/ngrok
+
+ngrok version
+
+apt update
+
+nvidia-smi
+
+pip install --upgrade gradio onnxruntime
+
+pip install -r requirements.txt
+
+python localtunnel.py
+
+conda create --name roop-unleashed python=3.12
+
+conda activate roop-unleashed
+
